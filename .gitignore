@@ -47,7 +47,6 @@ Desktop.ini
 ######################
 # NetBeans
 ######################
-nbproject/
 build/
 nbbuild/
 dist/
@@ -103,4 +102,4 @@ derby.log
 
 .factorypath
 
-nbproject/private
+nbproject/private/

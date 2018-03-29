@@ -83,10 +83,10 @@
                                         </div>
                                     </div>
                                 </li>
-<!--                                <li class="divider"></li>
-                                <a href="#" >
-                                  <i class="fa fa-sign-out fa-fw">Logout</i>
-                                </a>-->
+                                <!--                                <li class="divider"></li>
+                                                                <a href="#" >
+                                                                  <i class="fa fa-sign-out fa-fw">Logout</i>
+                                                                </a>-->
                             </ul>
                         </li>
                     </ul>
@@ -107,13 +107,10 @@
                         <p class="text-faded mb-5">Le covoiturage simplifie vos trajets.</p>
                         <input  id="" name="" type="text" class="form-control" placeholder="Depart">
                         <input  id="" name="" type="text" class="form-control" placeholder="Destination">
-                        <p>Date : <input type="text" value="" name="date1" id="champ_date1" class="form-control" placeholder="Date"></p>
-                        <div id="calendarMain1"></div>
-                        <script type="text/javascript">
-                        //<![CDATA[
-                        calInit("calendarMain1", "", "champ_date1", "jsCalendar", "day", "selectedDay");
-                        //]]>
-                        </script>
+                        <input  id="champ_date" name="" type="text" class="form-control" placeholder="Date">
+                            <script type="text/javascript">
+                                calInit(jsSimpleDatePickr(jsCalendar), "", "champ_date", "jsCalendar", "day", "selectedDay");
+                            </script>
                         <br><br>
                         <a class="btn btn-primary btn-xl js-scroll-trigger" href="#about">Chercher un trajet</a>
                     </div>

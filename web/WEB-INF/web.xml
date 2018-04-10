@@ -8,6 +8,15 @@
         <servlet-name>LoginServlet</servlet-name>
         <url-pattern>/LoginServlet</url-pattern>
     </servlet-mapping>
+    <servlet>
+        <servlet-name>Ad</servlet-name>
+        <servlet-class>com.sdzee.servlets.AdServlets</servlet-class>
+        <load-on-startup>2</load-on-startup>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>Ad</servlet-name>
+        <url-pattern>/ad</url-pattern>
+    </servlet-mapping>
     <session-config>
         <session-timeout>
             30

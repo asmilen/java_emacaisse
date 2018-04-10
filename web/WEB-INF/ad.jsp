@@ -31,7 +31,7 @@
                     <br />
     
                     <label for="villeIntermediare">Villes intérmediares <span class="requis">*</span></label>
-                    <input type="List" id="villeIntermediaire" name="villeIntermediare" value="" size="20" maxlength="20" />
+                    <input type="text" id="villeIntermediaire" name="villeIntermediare" value="" size="20" maxlength="20" />
                     <br />
     
                     <label for="dateDepart">Date de départ <span class="requis">*</span></label>

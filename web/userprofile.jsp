@@ -1,15 +1,41 @@
+<%-- 
+    Document   : userprofile
+    Created on : Apr 5, 2018, 10:45:34 AM
+    Author     : nguyenhaidang
+--%>
+
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html data-locale="fr_FR" lang="fr">
     <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
-    </head>
-    <body>
-        <h1 class="title-lv1 border-bottom margin-bottom">
-            Informations personnelles
-        </h1>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>Informations personnelles</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta name="description" content="">
+        <meta name="author" content="">
 
-        <form name="profile_general" method="post" action="/dashboard/profile/general" class="profile-form form-container profile-general-form form-horizontal padding no-margin-bottom" novalidate="novalidate">
+        <!-- Bootstrap core CSS -->
+        <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+        <!-- Custom fonts for this template -->
+        <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+        <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+        <link href='https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
+
+        <!-- Plugin CSS -->
+        <link href="vendor/magnific-popup/magnific-popup.css" rel="stylesheet">
+
+        <!-- Custom styles for this template -->
+        <link href="css/creative.min.css" rel="stylesheet">
+
+        <!-- Datetime picker-->
+        <link href="./vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" media="screen">
+        <link href="./css/bootstrap-datetimepicker.min.css" rel="stylesheet" media="screen">
+    </head>
+    <body style="background-color:gray;">
+        <!-- Navigation -->
+        <jsp:include page="nav.jsp" />
+        <form name="profile_general" method="post" action="/dashboard/profile/general" class="profile-form form-container profile-general-form">
             <fieldset>
 
 
@@ -23,9 +49,9 @@
                     </div>
                     <div class="control-group "><label for="profile_general_firstname" class=" control-label">Prénom</label><div class="controls"><input type="text" id="profile_general_firstname" name="profile_general[firstname]" required="required" value="Hải Đăng"></div></div>
                     <div class="control-group "><label for="profile_general_lastname" class=" control-label">Nom</label><div class="controls"><input type="text" id="profile_general_lastname" name="profile_general[lastname]" required="required" value="Nguyễn"></div></div>
-                </section>
+<!--                </section>
 
-                <section class="contact-container">
+                <section class="contact-container">-->
                     <div class="control-group "><label for="profile_general_email" class=" control-label">E-mail</label><div class="controls"><input type="email" id="profile_general_email" name="profile_general[email]" required="required" value="haidang.cva@gmail.com"><svg aria-hidden="true" class="c-icon badge-checked u-green-fill" style="width: 20px; height: 20px;"><use xlink:href="#icon-check-circle"></use></svg></div></div>
 
                     <div class="control-group cellphone-row">
@@ -35,13 +61,15 @@
 
                         </div>
                     </div>
-                </section>
+<!--                </section>
 
-                <section class="birthday-container">
-                    <div class="control-group "><label for="profile_general_birthYear" class=" control-label">Année de naissance</label><div class="controls"><select id="profile_general_birthYear" name="profile_general[birthYear]"><option value="2000">2000</option><option value="1999">1999</option><option value="1998">1998</option><option value="1997">1997</option><option value="1996">1996</option><option value="1995">1995</option><option value="1994" selected="selected">1994</option><option value="1993">1993</option><option value="1992">1992</option><option value="1991">1991</option><option value="1990">1990</option><option value="1989">1989</option><option value="1988">1988</option><option value="1987">1987</option><option value="1986">1986</option><option value="1985">1985</option><option value="1984">1984</option><option value="1983">1983</option><option value="1982">1982</option><option value="1981">1981</option><option value="1980">1980</option><option value="1979">1979</option><option value="1978">1978</option><option value="1977">1977</option><option value="1976">1976</option><option value="1975">1975</option><option value="1974">1974</option><option value="1973">1973</option><option value="1972">1972</option><option value="1971">1971</option><option value="1970">1970</option><option value="1969">1969</option><option value="1968">1968</option><option value="1967">1967</option><option value="1966">1966</option><option value="1965">1965</option><option value="1964">1964</option><option value="1963">1963</option><option value="1962">1962</option><option value="1961">1961</option><option value="1960">1960</option><option value="1959">1959</option><option value="1958">1958</option><option value="1957">1957</option><option value="1956">1956</option><option value="1955">1955</option><option value="1954">1954</option><option value="1953">1953</option><option value="1952">1952</option><option value="1951">1951</option><option value="1950">1950</option><option value="1949">1949</option><option value="1948">1948</option><option value="1947">1947</option><option value="1946">1946</option><option value="1945">1945</option><option value="1944">1944</option><option value="1943">1943</option><option value="1942">1942</option><option value="1941">1941</option><option value="1940">1940</option><option value="1939">1939</option><option value="1938">1938</option><option value="1937">1937</option><option value="1936">1936</option><option value="1935">1935</option><option value="1934">1934</option><option value="1933">1933</option><option value="1932">1932</option><option value="1931">1931</option><option value="1930">1930</option><option value="1929">1929</option><option value="1928">1928</option><option value="1927">1927</option><option value="1926">1926</option><option value="1925">1925</option><option value="1924">1924</option><option value="1923">1923</option><option value="1922">1922</option><option value="1921">1921</option><option value="1920">1920</option><option value="1919">1919</option><option value="1918">1918</option></select></div></div>
-                </section>
+                <section class="birthday-container">-->
+                    <div class="control-group">
+                        <label for="profile_general_birthYear" class="control-label">Année de naissance</label>
+                        <div class="controls"><select id="profile_general_birthYear" name="profile_general[birthYear]"><option value="2000">2000</option><option value="1999">1999</option><option value="1998">1998</option><option value="1997">1997</option><option value="1996">1996</option><option value="1995">1995</option><option value="1994" selected="selected">1994</option><option value="1993">1993</option><option value="1992">1992</option><option value="1991">1991</option><option value="1990">1990</option><option value="1989">1989</option><option value="1988">1988</option><option value="1987">1987</option><option value="1986">1986</option><option value="1985">1985</option><option value="1984">1984</option><option value="1983">1983</option><option value="1982">1982</option><option value="1981">1981</option><option value="1980">1980</option><option value="1979">1979</option><option value="1978">1978</option><option value="1977">1977</option><option value="1976">1976</option><option value="1975">1975</option><option value="1974">1974</option><option value="1973">1973</option><option value="1972">1972</option><option value="1971">1971</option><option value="1970">1970</option><option value="1969">1969</option><option value="1968">1968</option><option value="1967">1967</option><option value="1966">1966</option><option value="1965">1965</option><option value="1964">1964</option><option value="1963">1963</option><option value="1962">1962</option><option value="1961">1961</option><option value="1960">1960</option><option value="1959">1959</option><option value="1958">1958</option><option value="1957">1957</option><option value="1956">1956</option><option value="1955">1955</option><option value="1954">1954</option><option value="1953">1953</option><option value="1952">1952</option><option value="1951">1951</option><option value="1950">1950</option><option value="1949">1949</option><option value="1948">1948</option><option value="1947">1947</option><option value="1946">1946</option><option value="1945">1945</option><option value="1944">1944</option><option value="1943">1943</option><option value="1942">1942</option><option value="1941">1941</option><option value="1940">1940</option><option value="1939">1939</option><option value="1938">1938</option><option value="1937">1937</option><option value="1936">1936</option><option value="1935">1935</option><option value="1934">1934</option><option value="1933">1933</option><option value="1932">1932</option><option value="1931">1931</option><option value="1930">1930</option><option value="1929">1929</option><option value="1928">1928</option><option value="1927">1927</option><option value="1926">1926</option><option value="1925">1925</option><option value="1924">1924</option><option value="1923">1923</option><option value="1922">1922</option><option value="1921">1921</option><option value="1920">1920</option><option value="1919">1919</option><option value="1918">1918</option></select></div></div>
+<!--                </section>
 
-                <section class="biography-container">
+                <section class="biography-container">-->
                     <div class="control-group">
                         <!--<label for="profile_general_biography" class="control-label">Lighthouse Nguyen</label>-->
                         <div class="controls">
@@ -77,11 +105,28 @@
 
                 <div class="control-group">
                     <div class="controls button-container">
-                        <button type="submit">Enregistrer</button>
+                        <button class="btn btn-primary" type="submit">Enregistrer</button>
                     </div>
                 </div>
             </fieldset>
             <input type="hidden" id="profile_general__token" name="profile_general[_token]" value="bmTPNOzTl07cttH67rN-rHJ5XVNGuCneGjL6uziRyiM">
         </form>
+        <!-- Bootstrap core JavaScript -->
+        <script src="vendor/jquery/jquery.min.js"></script>
+        <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+        <!-- Plugin JavaScript -->
+        <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+        <script src="vendor/scrollreveal/scrollreveal.min.js"></script>
+        <script src="vendor/magnific-popup/jquery.magnific-popup.min.js"></script>
+
+        <!-- Custom scripts for this template -->
+        <script src="js/creative.min.js"></script>
+
+        <!--custom datetime picker -->
+        <script type="text/javascript" src="./vendor/jquery/jquery-1.8.3.min.js" charset="UTF-8"></script>
+        <!--<script type="text/javascript" src="./vendor/bootstrap/js/bootstrap.min.js"></script>-->
+        <script type="text/javascript" src="./js/bootstrap-datetimepicker.js" charset="UTF-8"></script>
+        <script type="text/javascript" src="./js/locales/bootstrap-datetimepicker.fr.js" charset="UTF-8"></script>
     </body>
 </html>

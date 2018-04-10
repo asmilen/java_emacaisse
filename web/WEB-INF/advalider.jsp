@@ -6,7 +6,7 @@
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
-<html>
+<html data-locale="fr_FR" lang="fr">
     <head>
         <meta charset="utf-8" />
         <title>Affichage du covoituraget</title>

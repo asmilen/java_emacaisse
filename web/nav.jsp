@@ -29,7 +29,8 @@
                             <a class="nav-link js-scroll-trigger" href="vehicle.jsp">Vehicle</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link js-scroll-trigger" href="#contact">Contact</a>
+                            <a class="nav-link js-scroll-trigger" href="ad">AD</a>
+                            <!--<a class="nav-link js-scroll-trigger" href="#contact">Contact</a>-->
                         </li>
                         <li class="nav-item dropdown">
                             <a href="#" class="nav-link js-scroll-trigger dropdown-toggle" data-toggle="dropdown"><b>Connexion</b> <span class="caret"></span></a>

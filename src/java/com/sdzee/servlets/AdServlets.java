@@ -22,6 +22,7 @@ import javax.servlet.http.HttpServletResponse;
 
 
 import com.sdzee.beans.Ad;
+import java.util.List;
 
 /**
  *
@@ -98,6 +99,9 @@ public class AdServlets extends HttpServlet {
         /* Ajout du bean et du message à l'objet requête */
         request.setAttribute( "annonce", annonce );
         request.setAttribute( "message", message );
+        
+        /* Link with the data base */
+        List<String> etatBDD = annonce.executerTests( request );
 
         /* Transmission à la page JSP en charge de l'affichage des données */
         this.getServletContext().getRequestDispatcher( "/advalider.jsp" ).forward( request, response );

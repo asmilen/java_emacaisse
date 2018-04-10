@@ -5,6 +5,15 @@
  */
 package com.sdzee.beans;
 
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
+import java.util.ArrayList;
+import java.util.List;
+import javax.servlet.http.HttpServletRequest;
+
 /**
  *
  * @author samuel
@@ -119,5 +128,70 @@ public class Ad {
         this.villeIntermediaire = villeIntermediaire;
     }
 
+    /* LINK WITH THE DATA BASE */
+    
+    /* La liste qui permet de savoir ou ca plante */
+    private List<String> etatBDD = new ArrayList<String>();
+
+    public List<String> executerTests( HttpServletRequest request ) {
+    /* Chargement du driver JDBC pour MySQL */
+    try {
+        etatBDD.add( "Chargement du driver..." );
+        Class.forName( "com.mysql.jdbc.Driver" );
+        etatBDD.add( "Driver chargé !" );
+    } catch ( ClassNotFoundException e ) {
+        etatBDD.add( "Erreur lors du chargement : le driver n'a pas été trouvé dans le classpath ! <br/>"
+                + e.getMessage() );
+    }
+
+    /* Connexion à la base de données */
+    String url = "jdbc:mysql://localhost:3306/ema-caisse"; // a changer lors de la connection avec le serveur de l'ecole
+    String utilisateur = "Zebi"; // A SIGNALER AU GROUPE
+    String motDePasse = "Zebi";  // IDEM
+    Connection connexion = null;
+    Statement statement = null;
+    ResultSet resultat = null;
+    try {
+        etatBDD.add( "Connexion à la base de données..." );
+        connexion = DriverManager.getConnection( url, utilisateur, motDePasse );
+        etatBDD.add( "Connexion réussie !" );
+
+        /* Création de l'objet gérant les requêtes */
+        statement = connexion.createStatement();
+        etatBDD.add( "Objet requête créé !" );
+
+        /* Exécution d'une requête de lecture */
+        resultat = statement.executeQuery( ";" );  // mettre la commande sql qui enregistre le voyage dans la bdd
+        etatBDD.add( "Requête \";\" effectuée !" );
+ 
+    } catch ( SQLException e ) {
+        etatBDD.add( "Erreur lors de la connexion : <br/>"
+                + e.getMessage() );
+    } finally {
+        etatBDD.add( "Fermeture de l'objet ResultSet." );
+        if ( resultat != null ) {
+            try {
+                resultat.close();
+            } catch ( SQLException ignore ) {
+            }
+        }
+        etatBDD.add( "Fermeture de l'objet Statement." );
+        if ( statement != null ) {
+            try {
+                statement.close();
+            } catch ( SQLException ignore ) {
+            }
+        }
+        etatBDD.add( "Fermeture de l'objet Connection." );
+        if ( connexion != null ) {
+            try {
+                connexion.close();
+            } catch ( SQLException ignore ) {
+            }
+        }
+    }
+
+    return etatBDD;
+}
     
 }

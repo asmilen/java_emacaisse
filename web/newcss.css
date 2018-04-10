@@ -1,0 +1,75 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 5 avr. 2018, 14:38:16
+    Author     : samuel
+*/
+
+/* On travaille sur la balise body, donc sur TOUTE la page */
+body
+{
+    background-image: url("http://iwallpapers2.free.fr/images/Photographie/Black_Collection/Route_dans_le_desert_1920x1080.jpg");
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    font-family: impact
+}
+head{font-family: impact}
+h1{
+    font-size: xx-large
+}
+legend
+{color:yellow}
+label
+{color:yellow}
+fieldset {
+    padding: 10px;
+    border: 2px yellow double;
+    margin: 10px;
+    border-radius: 10px;
+    position: relative;
+    right: 0px;
+    top: 50px;
+
+}
+a{
+   position: relative;
+    left: 15px;
+    top: 50px; 
+}
+aside
+{position: absolute;
+    right: 10px;
+    bottom: 0px}
+
+button{
+   width:110px;
+	cursor:pointer;
+	text-transform:capitalize;
+	}
+
+
+/* -------------------- */
+	/* CLASSES */
+	/* -------------------- */
+	.submit{
+		width:85px;
+	height:85px;
+	background:#fafafa;
+	box-shadow:2px 2px 8px #aaa;
+	font:bold 13px Arial;
+	border-radius:50%;
+	color:#555;
+	}
+	.reset{
+		width:85px;
+	height:85px;
+	background:#fafafa;
+	box-shadow:2px 2px 8px #aaa;
+	font:bold 13px Arial;
+	border-radius:50%;
+	color:#555;
+	}
+	

@@ -46,7 +46,7 @@ public class AdServlets extends HttpServlet {
         String villeIntermediaire = request.getParameter( "villeIntermediaire" );
         String dateDepart = request.getParameter( "dateDepart" );
         String dateRetour = request.getParameter( "dateRetour" );
-        String heureDepart= request.getParameter( "heuredepart" );
+        String heureDepart= request.getParameter( "heureDepart" );
         String heureRetour= request.getParameter( "heureRetour" );
         
         SimpleDateFormat sdf = new SimpleDateFormat("dd-MMM-yyyy");

@@ -134,7 +134,7 @@ public class Ad {
     /* LINK WITH THE DATA BASE */
     
     /* La liste qui permet de savoir ou ca plante */
-    private List<String> etatBDD = new ArrayList<String>();
+    private List<String> etatBDD = new ArrayList<>();
 
     public List<String> executerTests( HttpServletRequest request ) {
     /* Chargement du driver JDBC pour MySQL */

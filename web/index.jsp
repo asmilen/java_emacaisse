@@ -60,7 +60,7 @@
                             <input type="hidden" id="dtp_input2" value="" /><br/>
                         </div>
                         <br><br>
-                        <a class="btn btn-primary btn-xl js-scroll-trigger" href="#about">Chercher un trajet</a>
+                        <a class="btn btn-primary btn-xl js-scroll-trigger" href="travelling.jsp">Chercher un trajet</a>
                     </div>
                 </div>
             </div>

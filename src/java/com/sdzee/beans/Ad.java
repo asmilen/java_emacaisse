@@ -148,9 +148,9 @@ public class Ad {
     }
 
     /* Connexion à la base de données */
-    String url = "jdbc:mysql://localhost:3306/ema-caisse"; // a changer lors de la connection avec le serveur de l'ecole
-    String utilisateur = "Zebi"; // A SIGNALER AU GROUPE
-    String motDePasse = "Zebi";  // IDEM
+    String url = "jdbc:mysql://localhost:3306/ema_caisse"; // a changer lors de la connection avec le serveur de l'ecole
+    String utilisateur = "root"; // A SIGNALER AU GROUPE
+    String motDePasse = "";  // IDEM
     Connection connexion = null;
     Statement statement = null;
     ResultSet resultat = null;

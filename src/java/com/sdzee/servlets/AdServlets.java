@@ -37,7 +37,7 @@ public class AdServlets extends HttpServlet {
     @Override
     public void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         /* Affichage de la page d'inscription */
-        this.getServletContext().getRequestDispatcher(VUE).forward(request, response);
+    //    this.getServletContext().getRequestDispatcher(VUE).forward(request, response);
         /*
          * Récupération des données saisies, envoyées en tant que paramètres de
          * la requête GET générée à la validation du formulaire

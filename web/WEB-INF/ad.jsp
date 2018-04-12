@@ -10,7 +10,7 @@
     <head>
         <meta charset="utf-8" />
         <title>Création d'une annonce</title>
-        <link type="text/css" rel="stylesheet" href="newcss.css" />
+        <link type="text/css" rel="stylesheet" href="css/newcss.css" />
         <!-- Bootstrap core CSS -->
         <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
     </head>

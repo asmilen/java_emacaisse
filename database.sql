@@ -19,120 +19,7 @@
 /*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
-
-# Dump of table car
-# ------------------------------------------------------------
-
-DROP TABLE IF EXISTS `car`;
-
-CREATE TABLE `car` (
-  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
-  `name` varchar(50) NOT NULL,
-  `make` varchar(50) NOT NULL,
-  `model` varchar(50) NOT NULL,
-  `make_year` int(11) NOT NULL,
-  `comfort_level` int(11) NOT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
-
-
-# Dump of table city
-# ------------------------------------------------------------
-
-DROP TABLE IF EXISTS `city`;
-
-CREATE TABLE `city` (
-  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
-  `city_name` varchar(50) NOT NULL,
-  `state` varchar(50) NOT NULL,
-  `country` varchar(50) NOT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
-
-
-# Dump of table enroute_city
-# ------------------------------------------------------------
-
-DROP TABLE IF EXISTS `enroute_city`;
-
-CREATE TABLE `enroute_city` (
-  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
-  `ride_id` int(10) unsigned NOT NULL,
-  `city_id` int(10) unsigned NOT NULL,
-  `order_from_source` int(10) NOT NULL,
-  `prorated_contribution` int(10) NOT NULL,
-  PRIMARY KEY (`id`),
-  KEY `enroute_city_city` (`city_id`),
-  KEY `enroute_city_ride` (`ride_id`),
-  CONSTRAINT `enroute_city_city` FOREIGN KEY (`city_id`) REFERENCES `city` (`id`),
-  CONSTRAINT `enroute_city_ride` FOREIGN KEY (`ride_id`) REFERENCES `ride` (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
-
-
-# Dump of table luggage_size
-# ------------------------------------------------------------
-
-DROP TABLE IF EXISTS `luggage_size`;
-
-CREATE TABLE `luggage_size` (
-  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
-  `description` varchar(50) NOT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
-
-
-# Dump of table music_preference
-# ------------------------------------------------------------
-
-DROP TABLE IF EXISTS `music_preference`;
-
-CREATE TABLE `music_preference` (
-  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
-  `description` varchar(50) NOT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
-
-
-# Dump of table request
-# ------------------------------------------------------------
-
-DROP TABLE IF EXISTS `request`;
-
-CREATE TABLE `request` (
-  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
-  `requester_id` int(10) unsigned NOT NULL,
-  `ride_id` int(10) unsigned NOT NULL,
-  `enroute_city_id` int(10) unsigned DEFAULT NULL,
-  `created_on` date NOT NULL,
-  `request_status_id` int(10) unsigned NOT NULL,
-  PRIMARY KEY (`id`),
-  KEY `request_enroute_city` (`enroute_city_id`),
-  KEY `request_request_status` (`request_status_id`),
-  KEY `request_ride` (`ride_id`),
-  CONSTRAINT `request_enroute_city` FOREIGN KEY (`enroute_city_id`) REFERENCES `enroute_city` (`id`),
-  CONSTRAINT `request_request_status` FOREIGN KEY (`request_status_id`) REFERENCES `request_status` (`id`),
-  CONSTRAINT `request_ride` FOREIGN KEY (`ride_id`) REFERENCES `ride` (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
-
-
-# Dump of table request_status
-# ------------------------------------------------------------
-
-DROP TABLE IF EXISTS `request_status`;
-
-CREATE TABLE `request_status` (
-  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
-  `description` varchar(10) NOT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
-
+CREATE DATABASE ema_caisse DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci;
 
 # Dump of table ride
 # ------------------------------------------------------------
@@ -141,7 +28,7 @@ DROP TABLE IF EXISTS `ride`;
 
 CREATE TABLE `ride` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
-  `user_car_id` int(10) unsigned NOT NULL,
+  `user_id` int(10) unsigned NOT NULL,
   `created_on` date NOT NULL,
   `travel_start_time` time NOT NULL,
   `travel_start_date` date NOT NULL,
@@ -163,42 +50,6 @@ CREATE TABLE `ride` (
   CONSTRAINT `ride_user_car` FOREIGN KEY (`user_car_id`) REFERENCES `user_car` (`id`),
   CONSTRAINT `source_ride_city` FOREIGN KEY (`source_city_id`) REFERENCES `city` (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
-
-
-# Dump of table user_car
-# ------------------------------------------------------------
-
-DROP TABLE IF EXISTS `user_car`;
-
-CREATE TABLE `user_car` (
-  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
-  `user_id` int(10) unsigned NOT NULL,
-  `car_id` int(10) unsigned NOT NULL,
-  `car_registration_number` varchar(50) NOT NULL,
-  `car_color` varchar(20) NOT NULL,
-  PRIMARY KEY (`id`),
-  KEY `user_car_car` (`car_id`),
-  CONSTRAINT `user_car_car` FOREIGN KEY (`car_id`) REFERENCES `car` (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
-
-
-# Dump of table user_preference
-# ------------------------------------------------------------
-
-DROP TABLE IF EXISTS `user_preference`;
-
-CREATE TABLE `user_preference` (
-  `user_id` int(10) unsigned NOT NULL,
-  `is_smoking_allowed` tinyint(1) NOT NULL,
-  `is_pet_allowed` tinyint(1) NOT NULL,
-  `music_preference_id` int(10) unsigned NOT NULL,
-  PRIMARY KEY (`user_id`),
-  KEY `user_pref_music_pref` (`music_preference_id`),
-  CONSTRAINT `user_pref_music_pref` FOREIGN KEY (`music_preference_id`) REFERENCES `music_preference` (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
 
 
 # Dump of table users

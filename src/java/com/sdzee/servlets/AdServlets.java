@@ -56,7 +56,7 @@ public class AdServlets extends HttpServlet {
         int Prix;
         Prix = Integer.parseInt(request.getParameter("Prix"));
 
-        DateFormat sdf = SimpleDateFormat.getDateInstance();
+        DateFormat sdf = new SimpleDateFormat("AAAA-MM-DD");
         try {
             Date date1 = sdf.parse(dateDepart);
         } catch (ParseException ex) {

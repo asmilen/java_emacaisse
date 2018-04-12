@@ -197,12 +197,7 @@ public class Ad {
     return getEtatBDD();
 }
 
-    /**
-     * @param villeIntermediaire the villeIntermediaire to set
-     */
-    public void setVilleIntermediaire(List<String> villeIntermediaire) {
-        this.villeIntermediaire = villeIntermediaire;
-    }
+ 
 
     /**
      * @return the Prix

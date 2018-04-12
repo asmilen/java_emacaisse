@@ -47,7 +47,7 @@
                     </div>
                     <div class="col-lg-8 mx-auto">
                         <p class="text-faded mb-5">Le covoiturage simplifie vos trajets.</p>
-                        <div class="control-group"><input id="fromlocation" type="text" class="form-control" placeholder="Depart"></div>
+                        <div class="control-group"><input id="fromlocation" type="text" class="form-control" placeholder="Depart" autofocus></div>
                         <br>
                         <div class="control-group"><input id="tolocation" type="text" class="form-control" placeholder="Destination"></div>
                         <br>

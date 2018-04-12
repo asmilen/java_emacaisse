@@ -35,11 +35,11 @@
     <body style="background-color:gray;">
         <!-- Navigation -->
         <jsp:include page="nav.jsp" />
-        <form name="profile_general" method="post" action="/dashboard/profile/general" class="profile-form form-container profile-general-form">
+        <form style="margin-left: 20%" name="profile_general" method="post" action="/dashboard/profile/general" class="profile-form form-container profile-general-form">
             <fieldset>
 
 
-                <section class="civility-container">
+                <section>
                     <div class="control-group">
                         <div class="control-label">Genre</div>
                         <form>
@@ -101,13 +101,10 @@
                             </div>
                         </div>
                     </div>
-                </section>
-
-                <div class="control-group">
-                    <div class="controls button-container">
+<div class="controls button-container">
                         <button class="btn btn-primary" type="submit">Enregistrer</button>
                     </div>
-                </div>
+                </section>
             </fieldset>
             <input type="hidden" id="profile_general__token" name="profile_general[_token]" value="bmTPNOzTl07cttH67rN-rHJ5XVNGuCneGjL6uziRyiM">
         </form>
@@ -122,11 +119,5 @@
 
         <!-- Custom scripts for this template -->
         <script src="js/creative.min.js"></script>
-
-        <!--custom datetime picker -->
-        <script type="text/javascript" src="./vendor/jquery/jquery-1.8.3.min.js" charset="UTF-8"></script>
-        <!--<script type="text/javascript" src="./vendor/bootstrap/js/bootstrap.min.js"></script>-->
-        <script type="text/javascript" src="./js/bootstrap-datetimepicker.js" charset="UTF-8"></script>
-        <script type="text/javascript" src="./js/locales/bootstrap-datetimepicker.fr.js" charset="UTF-8"></script>
     </body>
 </html>

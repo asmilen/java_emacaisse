@@ -30,7 +30,7 @@
                         </li>
                         <li class="nav-item">
                             <!--<a class="nav-link js-scroll-trigger" href="ad">Proposer un covoiturage</a>-->
-                            <a class="nav-link js-scroll-trigger" href="#contact">Contact</a>
+                            <a class="nav-link js-scroll-trigger" href="contact.jsp">Contact</a>
                         </li>
                         <li class="nav-item dropdown">
                             <a href="#" class="nav-link js-scroll-trigger dropdown-toggle" data-toggle="dropdown"><b>Connexion</b> <span class="caret"></span></a>

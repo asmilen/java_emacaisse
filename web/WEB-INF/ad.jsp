@@ -11,8 +11,9 @@
         <meta charset="utf-8" />
         <title>Création d'une annonce</title>
         <link type="text/css" rel="stylesheet" href="newcss.css" />
-        <!-- Bootstrap core CSS -->
+        <!-- Bootstrap core CSS 
         <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+        -->
     </head>
     <body>
         <header>
@@ -28,11 +29,11 @@
                     <input type="text" id="villeDepart" name="villeDepart" value="" size="20" maxlength="20" required/>
                     <br />
 
-                    <label for="villeArrivee">Ville d'arrivée </label>
+                    <label for="villeArrivee">Ville d'arrivée <span class="requis">*</span></label>
                     <input type="text" id="villeArrivee" name="villeArrivee" value="" size="20" maxlength="20" />
                     <br />
 
-                    <label for="villeIntermediare">Villes intérmediares <span class="requis">*</span></label>
+                    <label for="villeIntermediare">Villes intérmediares </label>
                     <input type="text" id="villeIntermediaire" name="villeIntermediare" value="" size="20" maxlength="20" required/>
                     <br />
 
@@ -40,15 +41,27 @@
                     <input type="date" id="dateDepart" name="dateDepart" value="" size="20" maxlength="20" required />
                     <br />
 
-                    <label for="heureDepart">Heure de départ</label>
+                    <label for="heureDepart">Heure de départ<span class="requis">*</span></label>
                     <input type="time" id="heureDepart" name="heureDepart" value="" size="20" maxlength="60" />
                     <br />
-                    <label for="dateRetour">Date de retour <span class="requis">*</span></label>
+                    <label for="dateRetour">Date de retour</label>
                     <input type="date" id="dateRetour" name="dateRetour" value="" size="20" maxlength="20" required />
                     <br />
 
                     <label for="heureRetour">Heure de Retour</label>
                     <input type="time" id="heureRetour" name="heureRetour" value="" size="20" maxlength="60" />
+                    <br />
+                    
+                    <label for="NombrePlaces">Nombre de places disponibles <span class="requis">*</span></label>
+                    <input type="number" id="NombrePlaces" name="NombrePlaces" value="" size="20" maxlength="20" required />
+                    <br />
+                    
+                    <label for="PlaceBaguages">Place pour baguages <span class="requis">*</span></label>
+                    <input type="text" id="PlaceBaguages" name="PlaceBaguages" value="" size="20" maxlength="20" required/>
+                    <br />
+                    
+                    <label for="Prix">Prix par personne </label>
+                    <input type="number" id="Prix" name="Prix" value="" size="20" maxlength="20" required/>
                     <br />
                 </fieldset>
                 <br><br><br>

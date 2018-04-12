@@ -27,6 +27,9 @@ public class Ad {
     private String heureDepart;
     private String dateRetour;
     private String heureRetour;
+    private int Prix;
+    private int NombrePlaces;
+    private String PlacesBaguages;
 
     /**
      * @return the villeDepart
@@ -125,7 +128,7 @@ public class Ad {
      * @param villeIntermediaire the villeIntermediaire to set
      */
     public void setVilleIntermediaire(String villeIntermediaire) {
-        this.villeIntermediaire = villeIntermediaire;
+        this.setVilleIntermediaire(villeIntermediaire);
     }
 
     /* LINK WITH THE DATA BASE */
@@ -136,11 +139,11 @@ public class Ad {
     public List<String> executerTests( HttpServletRequest request ) {
     /* Chargement du driver JDBC pour MySQL */
     try {
-        etatBDD.add( "Chargement du driver..." );
+            getEtatBDD().add( "Chargement du driver..." );
         Class.forName( "com.mysql.jdbc.Driver" );
-        etatBDD.add( "Driver chargé !" );
+            getEtatBDD().add( "Driver chargé !" );
     } catch ( ClassNotFoundException e ) {
-        etatBDD.add( "Erreur lors du chargement : le driver n'a pas été trouvé dans le classpath ! <br/>"
+            getEtatBDD().add( "Erreur lors du chargement : le driver n'a pas été trouvé dans le classpath ! <br/>"
                 + e.getMessage() );
     }
 
@@ -152,37 +155,37 @@ public class Ad {
     Statement statement = null;
     ResultSet resultat = null;
     try {
-        etatBDD.add( "Connexion à la base de données..." );
+            getEtatBDD().add( "Connexion à la base de données..." );
         connexion = DriverManager.getConnection( url, utilisateur, motDePasse );
-        etatBDD.add( "Connexion réussie !" );
+            getEtatBDD().add( "Connexion réussie !" );
 
         /* Création de l'objet gérant les requêtes */
         statement = connexion.createStatement();
-        etatBDD.add( "Objet requête créé !" );
+            getEtatBDD().add( "Objet requête créé !" );
 
         /* Exécution d'une requête de lecture */
         resultat = statement.executeQuery( ";" );  // mettre la commande sql qui enregistre le voyage dans la bdd
-        etatBDD.add( "Requête \";\" effectuée !" );
+            getEtatBDD().add( "Requête \";\" effectuée !" );
  
     } catch ( SQLException e ) {
-        etatBDD.add( "Erreur lors de la connexion : <br/>"
+            getEtatBDD().add( "Erreur lors de la connexion : <br/>"
                 + e.getMessage() );
     } finally {
-        etatBDD.add( "Fermeture de l'objet ResultSet." );
+            getEtatBDD().add( "Fermeture de l'objet ResultSet." );
         if ( resultat != null ) {
             try {
                 resultat.close();
             } catch ( SQLException ignore ) {
             }
         }
-        etatBDD.add( "Fermeture de l'objet Statement." );
+            getEtatBDD().add( "Fermeture de l'objet Statement." );
         if ( statement != null ) {
             try {
                 statement.close();
             } catch ( SQLException ignore ) {
             }
         }
-        etatBDD.add( "Fermeture de l'objet Connection." );
+            getEtatBDD().add( "Fermeture de l'objet Connection." );
         if ( connexion != null ) {
             try {
                 connexion.close();
@@ -191,7 +194,70 @@ public class Ad {
         }
     }
 
-    return etatBDD;
+    return getEtatBDD();
 }
+
+    /**
+     * @param villeIntermediaire the villeIntermediaire to set
+     */
+    public void setVilleIntermediaire(List<String> villeIntermediaire) {
+        this.villeIntermediaire = villeIntermediaire;
+    }
+
+    /**
+     * @return the Prix
+     */
+    public int getPrix() {
+        return Prix;
+    }
+
+    /**
+     * @param Prix the Prix to set
+     */
+    public void setPrix(int Prix) {
+        this.Prix = Prix;
+    }
+
+    /**
+     * @return the NombrePlaces
+     */
+    public int getNombrePlaces() {
+        return NombrePlaces;
+    }
+
+    /**
+     * @param NombrePlaces the NombrePlaces to set
+     */
+    public void setNombrePlaces(int NombrePlaces) {
+        this.NombrePlaces = NombrePlaces;
+    }
+
+    /**
+     * @return the PlacesBaguages
+     */
+    public String getPlacesBaguages() {
+        return PlacesBaguages;
+    }
+
+    /**
+     * @param PlacesBaguages the PlacesBaguages to set
+     */
+    public void setPlacesBaguages(String PlacesBaguages) {
+        this.PlacesBaguages = PlacesBaguages;
+    }
+
+    /**
+     * @return the etatBDD
+     */
+    public List<String> getEtatBDD() {
+        return etatBDD;
+    }
+
+    /**
+     * @param etatBDD the etatBDD to set
+     */
+    public void setEtatBDD(List<String> etatBDD) {
+        this.etatBDD = etatBDD;
+    }
     
 }

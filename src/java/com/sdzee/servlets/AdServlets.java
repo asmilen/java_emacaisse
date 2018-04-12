@@ -49,6 +49,11 @@ public class AdServlets extends HttpServlet {
         String dateRetour = request.getParameter( "dateRetour" );
         String heureDepart= request.getParameter( "heureDepart" );
         String heureRetour= request.getParameter( "heureRetour" );
+        String PlaceBaguages= request.getParameter( "PlaceBaguages" );
+        int NombrePlaces;
+        NombrePlaces=Integer.parseInt(request.getParameter( "NombrePlaces"));
+        int Prix;
+        Prix=Integer.parseInt(request.getParameter( "Prix"));
         
         SimpleDateFormat sdf = new SimpleDateFormat("dd-MMM-yyyy");
         try {
@@ -95,7 +100,9 @@ public class AdServlets extends HttpServlet {
         annonce.setHeureDepart(heureDepart);
         annonce.setHeureRetour( heureRetour );
         annonce.setVilleIntermediaire( villeIntermediaire );
-
+        annonce.setPrix(Prix);
+        annonce.setNombrePlaces(NombrePlaces);
+        annonce.setPlacesBaguages(PlaceBaguages);
         /* Ajout du bean et du message à l'objet requête */
         request.setAttribute( "annonce", annonce );
         request.setAttribute( "message", message );

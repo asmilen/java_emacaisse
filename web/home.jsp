@@ -73,7 +73,7 @@
                         <h2 class="section-heading text-white">Vous prenez le volant ? Dites-nous où vous allez !</h2>
                         <hr class="light my-4">
                         <p class="text-faded mb-4">Profitez d'un trajet à moindre frais.</p>
-                        <a class="btn btn-light btn-xl js-scroll-trigger" href="#services">Proposer un trajet</a>
+                        <a class="btn btn-light btn-xl js-scroll-trigger" href="ad">Proposer un trajet</a>
                     </div>
                 </div>
             </div>

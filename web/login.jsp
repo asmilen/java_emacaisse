@@ -19,9 +19,11 @@
 
         <!-- Custom Fonts -->
         <link href="./vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+        
     </head>
     <body>
-
+        <!-- Navigation -->
+        <jsp:include page="nav.jsp" />
         <div class="container" style="margin-top: 10%">
             <div align="center">
                 <div class="col-lg-6 col-md-6 col-md-offset-6">
@@ -58,6 +60,7 @@
 
         <!-- Bootstrap Core JavaScript -->
         <script src="./vendor/bootstrap/js/bootstrap.min.js"></script>
+        
 
     </body>
 </html>

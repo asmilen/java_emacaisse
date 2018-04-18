@@ -9,7 +9,7 @@
 <html data-locale="fr_FR" lang="fr">
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>JSP Page</title>
+        <title>EMA Caisse</title>
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <meta name="description" content="">
         <meta name="author" content="">
@@ -29,6 +29,7 @@
         <link href="css/creative.min.css" rel="stylesheet">
 
         <!-- Datetime picker-->
+        <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
         <link href="./vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" media="screen">
         <link href="./css/bootstrap-datetimepicker.min.css" rel="stylesheet" media="screen">
     </head>
@@ -265,8 +266,12 @@
         <!--custom datetime picker -->
         <script type="text/javascript" src="./vendor/jquery/jquery-1.8.3.min.js" charset="UTF-8"></script>
         <!--<script type="text/javascript" src="./vendor/bootstrap/js/bootstrap.min.js"></script>-->
+          <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+        <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
         <script type="text/javascript" src="./js/bootstrap-datetimepicker.js" charset="UTF-8"></script>
         <script type="text/javascript" src="./js/locales/bootstrap-datetimepicker.fr.js" charset="UTF-8"></script>
+        <script type="text/javascript" src="./js/city.js" charset="UTF-8"></script>
+      
         <script type="text/javascript">
             $('.form_datetime').datetimepicker({
                 //language:  'fr',
@@ -298,6 +303,14 @@
                 minView: 0,
                 maxView: 1,
                 forceParse: 0
+            });
+            
+            $( "#fromlocation" ).autocomplete({
+                source: cities
+            });
+            
+            $( "#tolocation" ).autocomplete({
+                source: cities
             });
         </script>
     </body>

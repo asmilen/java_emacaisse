@@ -48,7 +48,7 @@
                     </div>
                     <div class="col-lg-8 mx-auto">
                         <p class="text-faded mb-5">Le covoiturage simplifie vos trajets.</p>
-                        <div class="control-group"><input id="fromlocation" type="text" class="form-control" placeholder="Depart"></div>
+                        <div class="control-group"><input id="fromlocation" type="text" class="form-control" placeholder="Depart" autofocus></div>
                         <br>
                         <div class="control-group"><input id="tolocation" type="text" class="form-control" placeholder="Destination"></div>
                         <br>
@@ -61,7 +61,7 @@
                             <input type="hidden" id="dtp_input2" value="" /><br/>
                         </div>
                         <br><br>
-                        <a class="btn btn-primary btn-xl js-scroll-trigger" href="#about">Chercher un trajet</a>
+                        <a class="btn btn-primary btn-xl js-scroll-trigger" href="travelling.jsp">Chercher un trajet</a>
                     </div>
                 </div>
             </div>
@@ -74,7 +74,7 @@
                         <h2 class="section-heading text-white">Vous prenez le volant ? Dites-nous où vous allez !</h2>
                         <hr class="light my-4">
                         <p class="text-faded mb-4">Profitez d'un trajet à moindre frais.</p>
-                        <a class="btn btn-light btn-xl js-scroll-trigger" href="#services">Proposer un trajet</a>
+                        <a class="btn btn-light btn-xl js-scroll-trigger" href="ad">Proposer un trajet</a>
                     </div>
                 </div>
             </div>

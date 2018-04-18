@@ -13,7 +13,7 @@
     <body>
         <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
             <div class="container">
-                <a class="navbar-brand js-scroll-trigger" href="home.jsp">EMA'caisse</a>
+                <a class="navbar-brand js-scroll-trigger" href="index.jsp">EMA'caisse</a>
                 <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
@@ -29,8 +29,8 @@
                             <a class="nav-link js-scroll-trigger" href="vehicle.jsp">Vehicle</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link js-scroll-trigger" href="ad">AD</a>
-                            <!--<a class="nav-link js-scroll-trigger" href="#contact">Contact</a>-->
+                            <!--<a class="nav-link js-scroll-trigger" href="ad">Proposer un covoiturage</a>-->
+                            <a class="nav-link js-scroll-trigger" href="contact.jsp">Contact</a>
                         </li>
                         <li class="nav-item dropdown">
                             <a href="#" class="nav-link js-scroll-trigger dropdown-toggle" data-toggle="dropdown"><b>Connexion</b> <span class="caret"></span></a>
@@ -74,10 +74,6 @@
                                         </div>
                                     </div>
                                 </li>
-                                <!--                                                                <li class="divider"></li>
-                                                                                                <a href="#" >
-                                                                                                  <i class="fa fa-sign-out fa-fw">Logout</i>
-                                                                                                </a>-->
                             </ul>
                         </li>
                     </ul>

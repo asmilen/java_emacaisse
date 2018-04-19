@@ -166,13 +166,13 @@ public class Ad {
         /* Recuperation de du user_id */
         String mail = session.getAttribute("email");
         resultat = statement.executeQuery("SELECT id FROM users WHERE email="+mail);
-        String user_id  = resultat.getInt("id");
+        String user_id  = String.valueOf(resultat.getInt("id"));
         resultat = null;
 
         /* Exécution de la requete d'enregistrement du trajet */
         resultat = statement.executeQuery( "INSERT INTO ride(user_id,travel_start_time,travel_start_date,travel_return_time,"
                 + "travel_return_date,source_city,destination_city,seats_offered,contribution_per_head,luggage_size)"
-                + "(USER_ID,'"+heureDepart+"','"+dateDepart+"','"+this.heureRetour+"','"+this.dateRetour+"',"
+                + "('"+user_id+"','"+heureDepart+"','"+dateDepart+"','"+this.heureRetour+"','"+this.dateRetour+"',"
                 + "'"+this.villeDepart+"','"+this.villeArrivé+"','"+this.NombrePlaces+"','"+this.Prix+"','"+this.PlacesBaguages+"')");  // mettre la commande sql qui enregistre le voyage dans la bdd
             getEtatBDD().add( "Requête sql effectuée !" );
  

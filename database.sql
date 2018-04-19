@@ -59,7 +59,7 @@ CREATE TABLE `users` (
   `last_name` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `created_at` datetime DEFAULT NULL,
   `updated_at` datetime DEFAULT NULL,
-  `phone` int(11) DEFAULT NULL,
+  `phone` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `date_of_birth` datetime DEFAULT NULL,
   `description` text COLLATE utf8mb4_unicode_ci,
   `gender` tinyint(1) DEFAULT NULL,

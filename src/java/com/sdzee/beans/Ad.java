@@ -27,8 +27,8 @@ public class Ad {
     private String heureDepart;
     private String dateRetour;
     private String heureRetour;
-    private int Prix;
-    private int NombrePlaces;
+    private String Prix;
+    private String NombrePlaces;
     private String PlacesBaguages;
 
     /**

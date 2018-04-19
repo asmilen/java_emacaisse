@@ -51,10 +51,8 @@ public class AdServlets extends HttpServlet {
         String heureDepart = request.getParameter("heureDepart");
         String heureRetour = request.getParameter("heureRetour");
         String PlaceBaguages = request.getParameter("PlaceBaguages");
-        int NombrePlaces;
-        NombrePlaces = Integer.parseInt(request.getParameter("NombrePlaces"));
-        int Prix;
-        Prix = Integer.parseInt(request.getParameter("Prix"));
+        String NombrePlaces= request.getParameter("NombrePlaces");
+        String Prix= request.getParameter("Prix");
 
         DateFormat sdf = new SimpleDateFormat("AAAA-MM-DD");
         try {

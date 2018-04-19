@@ -202,28 +202,28 @@ public class Ad {
     /**
      * @return the Prix
      */
-    public int getPrix() {
+    public String getPrix() {
         return Prix;
     }
 
     /**
      * @param Prix the Prix to set
      */
-    public void setPrix(int Prix) {
+    public void setPrix(String Prix) {
         this.Prix = Prix;
     }
 
     /**
      * @return the NombrePlaces
      */
-    public int getNombrePlaces() {
+    public String getNombrePlaces() {
         return NombrePlaces;
     }
 
     /**
      * @param NombrePlaces the NombrePlaces to set
      */
-    public void setNombrePlaces(int NombrePlaces) {
+    public void setNombrePlaces(String NombrePlaces) {
         this.NombrePlaces = NombrePlaces;
     }
 

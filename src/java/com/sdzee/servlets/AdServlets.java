@@ -112,7 +112,7 @@ public class AdServlets extends HttpServlet {
             List<String> etatBDD = annonce.executerTests(request);
 
             /* Transmission à la page JSP en charge de l'affichage des données */
-            this.getServletContext().getRequestDispatcher( "/advalider.jsp" ).forward( request, response );
+            this.getServletContext().getRequestDispatcher( "/WEB-INF/advalider.jsp" ).forward( request, response );
             /*BufferedReader buf = new BufferedReader(new FileReader("/WEB-INF/advalider"));
             StringBuilder sb = new StringBuilder();
             String lu = buf.readLine();

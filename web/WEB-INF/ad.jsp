@@ -122,8 +122,8 @@
                 </fieldset>
                 <br><br><br>
                 <div>
-                    <input class="btn btn-success" type="submit" value="Valider"  />
-                    <input class="btn btn-danger" type="reset" value="Annuler" />
+                    <input class="btn btn-success" href="advalider" type="submit" value="Valider"  />
+                    <input class="btn btn-danger" href="ad" type="reset"  value="Annuler" />
                 </div>
             </form>
         </div>

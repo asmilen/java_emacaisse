@@ -27,8 +27,8 @@ public class Ad {
     private String heureDepart;
     private String dateRetour;
     private String heureRetour;
-    private int Prix;
-    private int NombrePlaces;
+    private String Prix;
+    private String NombrePlaces;
     private String PlacesBaguages;
 
     /**
@@ -162,10 +162,19 @@ public class Ad {
         /* Création de l'objet gérant les requêtes */
         statement = connexion.createStatement();
             getEtatBDD().add( "Objet requête créé !" );
+        
+        /* Recuperation de du user_id */
+        String mail = session.getAttribute("email");
+        resultat = statement.executeQuery("SELECT id FROM users WHERE email="+mail);
+        String user_id  = resultat.getInt("id");
+        resultat = null;
 
-        /* Exécution d'une requête de lecture */
-        resultat = statement.executeQuery( ";" );  // mettre la commande sql qui enregistre le voyage dans la bdd
-            getEtatBDD().add( "Requête \";\" effectuée !" );
+        /* Exécution de la requete d'enregistrement du trajet */
+        resultat = statement.executeQuery( "INSERT INTO ride(user_id,travel_start_time,travel_start_date,travel_return_time,"
+                + "travel_return_date,source_city,destination_city,seats_offered,contribution_per_head,luggage_size)"
+                + "(USER_ID,'"+heureDepart+"','"+dateDepart+"','"+this.heureRetour+"','"+this.dateRetour+"',"
+                + "'"+this.villeDepart+"','"+this.villeArrivé+"','"+this.NombrePlaces+"','"+this.Prix+"','"+this.PlacesBaguages+"')");  // mettre la commande sql qui enregistre le voyage dans la bdd
+            getEtatBDD().add( "Requête sql effectuée !" );
  
     } catch ( SQLException e ) {
             getEtatBDD().add( "Erreur lors de la connexion : <br/>"
@@ -202,28 +211,28 @@ public class Ad {
     /**
      * @return the Prix
      */
-    public int getPrix() {
+    public String getPrix() {
         return Prix;
     }
 
     /**
      * @param Prix the Prix to set
      */
-    public void setPrix(int Prix) {
+    public void setPrix(String Prix) {
         this.Prix = Prix;
     }
 
     /**
      * @return the NombrePlaces
      */
-    public int getNombrePlaces() {
+    public String getNombrePlaces() {
         return NombrePlaces;
     }
 
     /**
      * @param NombrePlaces the NombrePlaces to set
      */
-    public void setNombrePlaces(int NombrePlaces) {
+    public void setNombrePlaces(String NombrePlaces) {
         this.NombrePlaces = NombrePlaces;
     }
 

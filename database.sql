@@ -34,21 +34,13 @@ CREATE TABLE `ride` (
   `travel_start_date` date NOT NULL,
   `travel_return_time` time NOT NULL,
   `travel_return_date` date NOT NULL,
-  `source_city_id` int(10) unsigned NOT NULL,
-  `destination_city_id` int(10) unsigned NOT NULL,
-  `seats_offered` int(10) NOT NULL,
-  `price` int(10)NOT NULL,
-  `contribution_per_head` int(10) NOT NULL,
-  `luggage_size_id` int(10) unsigned NOT NULL,
+  `source_city` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `destination_city` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `seats_offered` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `price` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `contribution_per_head` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,,
+  `luggage_size` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
   PRIMARY KEY (`id`),
-  KEY `destination_ride_city` (`destination_city_id`),
-  KEY `ride_luggage_size` (`luggage_size_id`),
-  KEY `ride_user_car` (`user_car_id`),
-  KEY `source_ride_city` (`source_city_id`),
-  CONSTRAINT `destination_ride_city` FOREIGN KEY (`destination_city_id`) REFERENCES `city` (`id`),
-  CONSTRAINT `ride_luggage_size` FOREIGN KEY (`luggage_size_id`) REFERENCES `luggage_size` (`id`),
-  CONSTRAINT `ride_user_car` FOREIGN KEY (`user_car_id`) REFERENCES `user_car` (`id`),
-  CONSTRAINT `source_ride_city` FOREIGN KEY (`source_city_id`) REFERENCES `city` (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 
@@ -73,6 +65,7 @@ CREATE TABLE `users` (
   `gender` tinyint(1) DEFAULT NULL,
   `driving_license_number` varchar(50) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `driving_license_valid_from` date DEFAULT NULL,
+  `car_description` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   PRIMARY KEY (`id`),
   UNIQUE KEY `users_email_unique` (`email`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;

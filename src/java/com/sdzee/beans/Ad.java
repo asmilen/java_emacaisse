@@ -12,7 +12,9 @@ import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
+import javax.mail.Session;
 import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpSession;
 
 /**
  *
@@ -162,9 +164,9 @@ public class Ad {
         /* Création de l'objet gérant les requêtes */
         statement = connexion.createStatement();
             getEtatBDD().add( "Objet requête créé !" );
-        
         /* Recuperation de du user_id */
-        String mail = session.getAttribute("email");
+        HttpSession session = request.getSession(true);
+        String mail = (String)session.getAttribute("email");
         resultat = statement.executeQuery("SELECT id FROM users WHERE email="+mail);
         String user_id  = String.valueOf(resultat.getInt("id"));
         resultat = null;
@@ -185,6 +187,7 @@ public class Ad {
             try {
                 resultat.close();
             } catch ( SQLException ignore ) {
+                getEtatBDD().add("Error"+ignore.getMessage());
             }
         }
             getEtatBDD().add( "Fermeture de l'objet Statement." );
@@ -192,6 +195,7 @@ public class Ad {
             try {
                 statement.close();
             } catch ( SQLException ignore ) {
+                getEtatBDD().add("Error"+ignore.getMessage());
             }
         }
             getEtatBDD().add( "Fermeture de l'objet Connection." );
@@ -199,6 +203,7 @@ public class Ad {
             try {
                 connexion.close();
             } catch ( SQLException ignore ) {
+                getEtatBDD().add("Error"+ignore.getMessage());
             }
         }
     }

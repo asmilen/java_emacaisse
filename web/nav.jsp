@@ -32,50 +32,7 @@
                             <!--<a class="nav-link js-scroll-trigger" href="ad">Proposer un covoiturage</a>-->
                             <a class="nav-link js-scroll-trigger" href="contact.jsp">Contact</a>
                         </li>
-                        <li class="nav-item dropdown">
-                            <a href="#" class="nav-link js-scroll-trigger dropdown-toggle" data-toggle="dropdown"><b>Connexion</b> <span class="caret"></span></a>
-                            <ul id="login-dp" class="dropdown-menu">
-                                <li>
-                                    <div class="row">
-                                        <div class="col-md-12">
-                                            connexion via
-                                            <div class="social-buttons">
-                                                <a href="https://www.facebook.com" class="btn btn-fb"><i class="fa fa-facebook"></i> Facebook</a>
-                                                <a href="https://twitter.com" class="btn btn-tw"><i class="fa fa-twitter"></i> Twitter</a>
-                                            </div>
-                                            ou
-                                            <form class="form" role="form" method="post" action="login" accept-charset="UTF-8" id="login-nav">
-                                                <div class="form-group">
-                                                    <label class="sr-only" for="exampleInputEmail2">Adresse email</label>
-                                                    <input type="email" class="form-control" id="exampleInputEmail2" placeholder="Email address" required>
-                                                </div>
-                                                <div class="form-group">
-                                                    <label class="sr-only" for="exampleInputPassword2">mot de passe</label>
-                                                    <input type="password" class="form-control" id="exampleInputPassword2" placeholder="Password" required>
-                                                    <div class="help-block text-center"><a href="">mot de passe oublié</a></div>
-                                                </div>
-                                                <div class="form-group">
-                                                    <button type="submit" class="btn btn-primary btn-block">se connecter</button>
-                                                </div>
-                                                <div class="checkbox">
-                                                    <label>
-                                                        <input type="checkbox">me garder connecté
-                                                    </label>
-                                                </div>
-                                                <div class="form-group">
-                                                    <div>
-                                                        <a href="" >
-                                                            <i class="fa fa-sign-out fa-fw">Logout</i>
-                                                        </a>
-                                                    </div>
-                                                </div>
-
-                                            </form>
-                                        </div>
-                                    </div>
-                                </li>
-                            </ul>
-                        </li>
+                               
                     </ul>
                 </div>
             </div>

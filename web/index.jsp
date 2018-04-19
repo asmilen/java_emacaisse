@@ -46,7 +46,7 @@
                         </h1>
                         <hr>
                     </div>
-                    <div class="col-lg-8 mx-auto">
+                    <div class="col-lg-8 col-md-8 col-sm-8 col-xs-8 mx-auto">
                         <p class="text-faded mb-5">Le covoiturage simplifie vos trajets.</p>
                         <div class="control-group"><input id="fromlocation" type="text" class="form-control" placeholder="Depart" autofocus></div>
                         <br>
@@ -70,7 +70,7 @@
         <section class="bg-primary" id="about">
             <div class="container">
                 <div class="row">
-                    <div class="col-lg-8 mx-auto text-center">
+                    <div class="col-lg-8 col-md-8 col-sm-8 col-xs-8 mx-auto text-center">
                         <h2 class="section-heading text-white">Vous prenez le volant ? Dites-nous où vous allez !</h2>
                         <hr class="light my-4">
                         <p class="text-faded mb-4">Profitez d'un trajet à moindre frais.</p>
@@ -83,7 +83,7 @@
         <section id="services">
             <div class="container">
                 <div class="row">
-                    <div class="col-lg-12 text-center">
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 text-center">
                         <h2 class="section-heading">Où allez-vous ?</h2>
                         <hr class="my-4">
                     </div>
@@ -91,28 +91,28 @@
             </div>
             <div class="container">
                 <div class="row">
-                    <div class="col-lg-3 col-md-6 text-center">
+                    <div class="col-lg-3 col-md-6 col-sm-6 col-xs-6 text-center">
                         <div class="service-box mt-5 mx-auto">
                             <i class="fa fa-4x fa-diamond text-primary mb-3 sr-icons"></i>
                             <h3 class="mb-3">Bordeaux-Toulouse</h3>
                             <p class="text-muted mb-0">à partir de 13 €</p>
                         </div>
                     </div>
-                    <div class="col-lg-3 col-md-6 text-center">
+                    <div class="col-lg-3 col-md-6 col-sm-6 col-xs-6 text-center">
                         <div class="service-box mt-5 mx-auto">
                             <i class="fa fa-4x fa-paper-plane text-primary mb-3 sr-icons"></i>
                             <h3 class="mb-3">Nantes-Rennes</h3>
                             <p class="text-muted mb-0">à partir de 13 €</p>
                         </div>
                     </div>
-                    <div class="col-lg-3 col-md-6 text-center">
+                    <div class="col-lg-3 col-md-6 col-sm-6 col-xs-6 text-center">
                         <div class="service-box mt-5 mx-auto">
                             <i class="fa fa-4x fa-newspaper-o text-primary mb-3 sr-icons"></i>
                             <h3 class="mb-3">Paris-Lion</h3>
                             <p class="text-muted mb-0"> partir de 13 €</p>
                         </div>
                     </div>
-                    <div class="col-lg-3 col-md-6 text-center">
+                    <div class="col-lg-3 col-md-6 col-sm-6 col-xs-6 text-center">
                         <div class="service-box mt-5 mx-auto">
                             <i class="fa fa-4x fa-heart text-primary mb-3 sr-icons"></i>
                             <h3 class="mb-3">Paris-Vietnam</h3>
@@ -126,7 +126,7 @@
         <section class="p-0" id="portfolio">
             <div class="container-fluid p-0">
                 <div class="row no-gutters popup-gallery">
-                    <div class="col-lg-4 col-sm-6">
+                    <div class="col-lg-4 col-md-6 col-sm-6 col-xs-6">
                         <a class="portfolio-box" href="img/portfolio/fullsize/1.jpg">
                             <img class="img-fluid" src="img/portfolio/thumbnails/1.jpg" alt="">
                             <div class="portfolio-box-caption">
@@ -141,7 +141,7 @@
                             </div>
                         </a>
                     </div>
-                    <div class="col-lg-4 col-sm-6">
+                    <div class="col-lg-4 col-md-6 col-sm-6 col-xs-6">
                         <a class="portfolio-box" href="img/portfolio/fullsize/2.jpg">
                             <img class="img-fluid" src="img/portfolio/thumbnails/2.jpg" alt="">
                             <div class="portfolio-box-caption">
@@ -156,7 +156,7 @@
                             </div>
                         </a>
                     </div>
-                    <div class="col-lg-4 col-sm-6">
+                    <div class="col-lg-4 col-md-6 col-sm-6 col-xs-6">
                         <a class="portfolio-box" href="img/portfolio/fullsize/3.jpg">
                             <img class="img-fluid" src="img/portfolio/thumbnails/3.jpg" alt="">
                             <div class="portfolio-box-caption">
@@ -171,7 +171,7 @@
                             </div>
                         </a>
                     </div>
-                    <div class="col-lg-4 col-sm-6">
+                    <div class="col-lg-4 col-md-6 col-sm-6 col-xs-6">
                         <a class="portfolio-box" href="img/portfolio/fullsize/4.jpg">
                             <img class="img-fluid" src="img/portfolio/thumbnails/4.jpg" alt="">
                             <div class="portfolio-box-caption">
@@ -186,7 +186,7 @@
                             </div>
                         </a>
                     </div>
-                    <div class="col-lg-4 col-sm-6">
+                    <div class="col-lg-4 col-md-6 col-sm-6 col-xs-6">
                         <a class="portfolio-box" href="img/portfolio/fullsize/5.jpg">
                             <img class="img-fluid" src="img/portfolio/thumbnails/5.jpg" alt="">
                             <div class="portfolio-box-caption">
@@ -201,7 +201,7 @@
                             </div>
                         </a>
                     </div>
-                    <div class="col-lg-4 col-sm-6">
+                    <div class="col-lg-4 col-md-6 col-sm-6 col-xs-6">
                         <a class="portfolio-box" href="img/portfolio/fullsize/6.jpg">
                             <img class="img-fluid" src="img/portfolio/thumbnails/6.jpg" alt="">
                             <div class="portfolio-box-caption">
@@ -222,26 +222,26 @@
 
         <section class="bg-dark text-white">
             <div class="container text-center">
-                <h2 class="mb-4">Allez où vous voulez. D'où vous voulez.</h2>
-                <a class="btn btn-light btn-xl sr-button" href="#">EMA'caisse</a>
+                <h2>Allez où vous voulez. D'où vous voulez.</h2>
+                <a class="btn btn-light" href="#">EMA'caisse</a>
             </div>
         </section>
 
         <section id="contact">
             <div class="container">
                 <div class="row">
-                    <div class="col-lg-8 mx-auto text-center">
+                    <div class="col-lg-8 col-md-8 col-sm-8 col-xs-8 mx-auto text-center">
                         <h2 class="section-heading">Let's Get In Touch!</h2>
                         <hr class="my-4">
                         <p class="mb-5">Ready to start your next project with us? That's great! Give us a call or send us an email and we will get back to you as soon as possible!</p>
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-lg-4 ml-auto text-center">
+                    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 ml-auto text-center">
                         <i class="fa fa-phone fa-3x mb-3 sr-contact"></i>
                         <p>123-456-6789</p>
                     </div>
-                    <div class="col-lg-4 mr-auto text-center">
+                    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 mr-auto text-center">
                         <i class="fa fa-envelope-o fa-3x mb-3 sr-contact"></i>
                         <p>
                             <a href="mailto:haidang.cva@gmail.com">haidang.cva@gmail.com</a>
@@ -265,13 +265,12 @@
 
         <!--custom datetime picker -->
         <script type="text/javascript" src="./vendor/jquery/jquery-1.8.3.min.js" charset="UTF-8"></script>
-        <!--<script type="text/javascript" src="./vendor/bootstrap/js/bootstrap.min.js"></script>-->
-          <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+        <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
         <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
         <script type="text/javascript" src="./js/bootstrap-datetimepicker.js" charset="UTF-8"></script>
         <script type="text/javascript" src="./js/locales/bootstrap-datetimepicker.fr.js" charset="UTF-8"></script>
         <script type="text/javascript" src="./js/city.js" charset="UTF-8"></script>
-      
+
         <script type="text/javascript">
             $('.form_datetime').datetimepicker({
                 //language:  'fr',
@@ -304,12 +303,12 @@
                 maxView: 1,
                 forceParse: 0
             });
-            
-            $( "#fromlocation" ).autocomplete({
+
+            $("#fromlocation").autocomplete({
                 source: cities
             });
-            
-            $( "#tolocation" ).autocomplete({
+
+            $("#tolocation").autocomplete({
                 source: cities
             });
         </script>

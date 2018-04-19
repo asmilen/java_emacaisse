@@ -26,7 +26,7 @@
         <jsp:include page="nav.jsp" />
         <div class="container" style="margin-top: 10%">
             <div align="center">
-                <div class="col-lg-6 col-md-6 col-md-offset-6">
+                <div class="col-lg-6 col-md-6 col-md-offset-6 col-sm-6 col-xs-6">
                     <div class="login-panel panel panel-default">
                         <div class="panel-heading">
                             <h3 class="panel-title">Please Sign In</h3>
@@ -40,7 +40,7 @@
                                     <div class="form-group">
                                         <input class="form-control" placeholder="Password" name="password" type="password" value="">
                                     </div>
-                                    <div class="checkbox">
+                                    <div>
                                         <label>
                                             <input name="remember" type="checkbox" value="Remember Me">Remember Me
                                         </label>

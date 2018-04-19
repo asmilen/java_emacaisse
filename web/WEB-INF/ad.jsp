@@ -28,93 +28,93 @@
                 <fieldset>
                     <legend>Trajet proposé</legend>
                     <div class="row"> 
-                        <div class="col-lg-4">
+                        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
                             <label for="villeDepart"> Ville de départ <span class="requis">*</span></label>
                         </div>
-                        <div class="col-lg-8">
+                        <div class="col-lg-8 col-md-8 col-sm-8 col-xs-8">
                             <input type="text" id="villeDepart" name="villeDepart" value="" size="20" maxlength="20" required/>
                         </div>
                     </div>
                     <br />
                     <div class="row"> 
-                        <div class="col-lg-4">
+                        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
                             <label for="villeArrivee">Ville d'arrivée </label>
                         </div>
-                        <div class="col-lg-8">
+                        <div class="col-lg-8 col-md-8 col-sm-8 col-xs-8">
                             <input type="text" id="villeArrivee" name="villeArrivee" value="" size="20" maxlength="20" />
                         </div>
                     </div>
                     <br />
                     <div class="row"> 
-                        <div class="col-lg-4">
+                        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
                             <label for="villeIntermediare">Villes intérmediares <span class="requis">*</span></label>
                         </div>
-                        <div class="col-lg-8">
+                        <div class="col-lg-8 col-md-8 col-sm-8 col-xs-8">
                             <input type="text" id="villeIntermediaire" name="villeIntermediare" value="" size="20" maxlength="20" required/>
                         </div>
                     </div>
 
                     <br />
                     <div class="row"> 
-                        <div class="col-lg-4">
+                        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
                             <label for="dateDepart">Date de départ <span class="requis">*</span></label>
                         </div>
-                        <div class="col-lg-8">
+                        <div class="col-lg-8 col-md-8 col-sm-8 col-xs-8">
                             <input type="date" id="dateDepart" name="dateDepart" value="" size="20" maxlength="20" required />
                         </div>
                     </div>
 
                     <br />
                     <div class="row"> 
-                        <div class="col-lg-4">
+                        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
                             <label for="heureDepart">Heure de départ</label>
                         </div>
-                        <div class="col-lg-8">
+                        <div class="col-lg-8 col-md-8 col-sm-8 col-xs-8">
                             <input type="time" id="heureDepart" name="heureDepart" value="" size="20" maxlength="60" />
                         </div>
                     </div>
                     <br />
                     <div class="row"> 
-                        <div class="col-lg-4">
+                        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
                             <label for="dateRetour">Date de retour </label>
                         </div>
-                        <div class="col-lg-8">
+                        <div class="col-lg-8 col-md-8 col-sm-8 col-xs-8">
                             <input type="date" id="dateRetour" name="dateRetour" value="" size="20" maxlength="20" required />
                         </div>
                     </div>
                     <br />
                     <div class="row"> 
-                        <div class="col-lg-4">
+                        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
                             <label for="heureRetour">Heure de Retour</label>
                         </div>
-                        <div class="col-lg-8">
+                        <div class="col-lg-8 col-md-8 col-sm-8 col-xs-8">
                             <input type="time" id="heureRetour" name="heureRetour" value="" size="20" maxlength="60" />
                         </div>
                     </div>
                     <br />
                     <div class="row"> 
-                        <div class="col-lg-4">
+                        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
                             <label for="PlaceBaguages">Place pour les baguages </label>
                         </div>
-                        <div class="col-lg-8">
+                        <div class="col-lg-8 col-md-8 col-sm-8 col-xs-8">
                             <input type="text" id="PlaceBaguages" name="PlaceBaguages" value="" size="20" maxlength="20" />
                         </div>
                     </div>
                     <br />
                     <div class="row"> 
-                        <div class="col-lg-4">
+                        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
                             <label for="NombrePlaces">Nombre de places </label>
                         </div>
-                        <div class="col-lg-8">
+                        <div class="col-lg-8 col-md-8 col-sm-8 col-xs-8">
                             <input type="number" id="NombrePlaces" name="NombrePlaces" value="" size="20" maxlength="20" />
                         </div>
                     </div>
                     <br />
                     <div class="row"> 
-                        <div class="col-lg-4">
+                        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
                             <label for="Prix">Prix </label>
                         </div>
-                        <div class="col-lg-8">
+                        <div class="col-lg-8 col-md-8 col-sm-8 col-xs-8">
                             <input type="number" id="Prix" name="Prix" value="" size="20" maxlength="20" />
                         </div>
                     </div>

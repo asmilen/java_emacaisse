@@ -112,7 +112,7 @@ public class AdServlets extends HttpServlet {
 
 
             /* Transmission à la page JSP en charge de l'affichage des données */
-            this.getServletContext().getRequestDispatcher( "/WEB-INF/advalider.jsp" ).forward( request, response );
+            this.getServletContext().getRequestDispatcher( VUE ).forward( request, response );
             /*BufferedReader buf = new BufferedReader(new FileReader("/WEB-INF/advalider"));
             StringBuilder sb = new StringBuilder();
             String lu = buf.readLine();

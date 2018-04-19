@@ -128,7 +128,7 @@ public class Ad {
      * @param villeIntermediaire the villeIntermediaire to set
      */
     public void setVilleIntermediaire(String villeIntermediaire) {
-        this.setVilleIntermediaire(villeIntermediaire);
+        this.villeIntermediaire=villeIntermediaire;
     }
 
     /* LINK WITH THE DATA BASE */
@@ -262,6 +262,10 @@ public class Ad {
      */
     public void setEtatBDD(List<String> etatBDD) {
         this.etatBDD = etatBDD;
+    }
+
+    private void villeIntermediaire(String villeIntermediaire) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
     
 }

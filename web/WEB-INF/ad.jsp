@@ -24,7 +24,7 @@
             </div>
         </header>
         <div align="center" class="table">
-            <form method="get" action="créationAnnonce">
+            <form method="get" action="advalider">
                 <fieldset>
                     <legend>Trajet proposé</legend>
                     <div class="row"> 
@@ -76,7 +76,7 @@
                     <br />
                     <div class="row"> 
                         <div class="col-lg-4">
-                            <label for="dateRetour">Date de retour <span class="requis">*</span></label>
+                            <label for="dateRetour">Date de retour </label>
                         </div>
                         <div class="col-lg-8">
                             <input type="date" id="dateRetour" name="dateRetour" value="" size="20" maxlength="20" required />
@@ -92,11 +92,38 @@
                         </div>
                     </div>
                     <br />
+                    <div class="row"> 
+                        <div class="col-lg-4">
+                            <label for="PlaceBaguages">Place pour les baguages </label>
+                        </div>
+                        <div class="col-lg-8">
+                            <input type="text" id="PlaceBaguages" name="PlaceBaguages" value="" size="20" maxlength="20" />
+                        </div>
+                    </div>
+                    <br />
+                    <div class="row"> 
+                        <div class="col-lg-4">
+                            <label for="NombrePlaces">Nombre de places </label>
+                        </div>
+                        <div class="col-lg-8">
+                            <input type="number" id="NombrePlaces" name="NombrePlaces" value="" size="20" maxlength="20" />
+                        </div>
+                    </div>
+                    <br />
+                    <div class="row"> 
+                        <div class="col-lg-4">
+                            <label for="Prix">Prix </label>
+                        </div>
+                        <div class="col-lg-8">
+                            <input type="number" id="Prix" name="Prix" value="" size="20" maxlength="20" />
+                        </div>
+                    </div>
+                    <br />
                 </fieldset>
                 <br><br><br>
                 <div>
-                    <input class="btn btn-success" type="submit" value="Valider"  />
-                    <input class="btn btn-danger" type="reset" value="Annuler" />
+                    <input class="btn btn-success"  type="submit" value="Valider"  />
+                    <input class="btn btn-danger"  type="reset"  value="Annuler" />
                 </div>
             </form>
         </div>

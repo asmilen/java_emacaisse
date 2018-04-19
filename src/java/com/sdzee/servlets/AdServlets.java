@@ -107,7 +107,9 @@ public class AdServlets extends HttpServlet {
             request.setAttribute("message", message);
 
             /* Link with the data base */
-            List<String> etatBDD = annonce.executerTests(request);
+            List<String> etatBDD = annonce.executerTests(request);    
+    ;
+
 
             /* Transmission à la page JSP en charge de l'affichage des données */
             this.getServletContext().getRequestDispatcher( "/WEB-INF/advalider.jsp" ).forward( request, response );
@@ -123,6 +125,4 @@ public class AdServlets extends HttpServlet {
             out.close();*/
         }
     }
-    
-    ;
     }

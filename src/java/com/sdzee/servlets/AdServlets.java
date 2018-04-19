@@ -126,4 +126,3 @@ public class AdServlets extends HttpServlet {
     
     ;
     }
-}

@@ -76,7 +76,7 @@
                     <br />
                     <div class="row"> 
                         <div class="col-lg-4">
-                            <label for="dateRetour">Date de retour <span class="requis">*</span></label>
+                            <label for="dateRetour">Date de retour </label>
                         </div>
                         <div class="col-lg-8">
                             <input type="date" id="dateRetour" name="dateRetour" value="" size="20" maxlength="20" required />
@@ -89,6 +89,33 @@
                         </div>
                         <div class="col-lg-8">
                             <input type="time" id="heureRetour" name="heureRetour" value="" size="20" maxlength="60" />
+                        </div>
+                    </div>
+                    <br />
+                    <div class="row"> 
+                        <div class="col-lg-4">
+                            <label for="PlaceBaguages">Place pour les baguages </label>
+                        </div>
+                        <div class="col-lg-8">
+                            <input type="text" id="PlaceBaguages" name="PlaceBaguages" value="" size="20" maxlength="20" />
+                        </div>
+                    </div>
+                    <br />
+                    <div class="row"> 
+                        <div class="col-lg-4">
+                            <label for="NombrePlaces">Nombre de places </label>
+                        </div>
+                        <div class="col-lg-8">
+                            <input type="number" id="NombrePlaces" name="NombrePlaces" value="" size="20" maxlength="20" />
+                        </div>
+                    </div>
+                    <br />
+                    <div class="row"> 
+                        <div class="col-lg-4">
+                            <label for="Prix">Prix </label>
+                        </div>
+                        <div class="col-lg-8">
+                            <input type="number" id="Prix" name="Prix" value="" size="20" maxlength="20" />
                         </div>
                     </div>
                     <br />

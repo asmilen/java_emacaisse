@@ -37,7 +37,7 @@ public class AdServlets extends HttpServlet {
     @Override
     public void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         /* Affichage de la page d'inscription */
-    //    this.getServletContext().getRequestDispatcher(VUE).forward(request, response);
+    this.getServletContext().getRequestDispatcher(VUE).forward(request, response);
         /*
          * Récupération des données saisies, envoyées en tant que paramètres de
          * la requête GET générée à la validation du formulaire
@@ -112,8 +112,8 @@ public class AdServlets extends HttpServlet {
             List<String> etatBDD = annonce.executerTests(request);
 
             /* Transmission à la page JSP en charge de l'affichage des données */
-            // this.getServletContext().getRequestDispatcher( "/advalider.jsp" ).forward( request, response );
-            BufferedReader buf = new BufferedReader(new FileReader("/WEB-INF/advalider"));
+            this.getServletContext().getRequestDispatcher( "/WEB-INF/advalider.jsp" ).forward( request, response );
+            /*BufferedReader buf = new BufferedReader(new FileReader("/WEB-INF/advalider"));
             StringBuilder sb = new StringBuilder();
             String lu = buf.readLine();
             while (lu != null) {
@@ -122,7 +122,7 @@ public class AdServlets extends HttpServlet {
             }
             PrintWriter out = response.getWriter();
             out.print(sb.toString());
-            out.close();
+            out.close();*/
         }
     }
 }

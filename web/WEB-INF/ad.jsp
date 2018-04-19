@@ -24,7 +24,7 @@
             </div>
         </header>
         <div align="center" class="table">
-            <form method="get" action="advalider">
+            <form method="post" action="advalider">
                 <fieldset>
                     <legend>Trajet proposé</legend>
                     <div class="row"> 

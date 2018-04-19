@@ -24,7 +24,7 @@
             </div>
         </header>
         <div align="center" class="table">
-            <form method="get" action="créationAnnonce">
+            <form method="get" action="advalider.jsp">
                 <fieldset>
                     <legend>Trajet proposé</legend>
                     <div class="row"> 
@@ -122,8 +122,8 @@
                 </fieldset>
                 <br><br><br>
                 <div>
-                    <input class="btn btn-success" href="advalider" type="submit" value="Valider"  />
-                    <input class="btn btn-danger" href="ad" type="reset"  value="Annuler" />
+                    <input class="btn btn-success"  type="submit" value="Valider"  />
+                    <input class="btn btn-danger"  type="reset"  value="Annuler" />
                 </div>
             </form>
         </div>

@@ -27,11 +27,11 @@ import javax.servlet.http.HttpSession;
  *
  * @author nguyen hai dang
  */
-@WebServlet(name = "Connection", urlPatterns = {"/connection"})
-public class Connection extends HttpServlet {
+@WebServlet(name = "Register", urlPatterns = {"/register"})
+public class Register extends HttpServlet {
 
-    public static final String VUE = "/WEB-INF/connection.jsp";
-    public static final String Homepage="/index.jsp";
+    public static final String VUE = "/WEB-INF/register.jsp";
+    public static final String Homepage = "/index.jsp";
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
     /**
@@ -46,22 +46,22 @@ public class Connection extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         this.getServletContext().getRequestDispatcher(VUE).forward(request, response);
-        String username = request.getParameter("username");
-        String userpassword = request.getParameter("userpassword");
+        String email = request.getParameter("email");
+        String pass = request.getParameter("password");
+        String firstname = request.getParameter("first_name");
+        String lastname = request.getParameter("last_name");
+        String phone = request.getParameter("phone");
+        String dateofbirth = request.getParameter("date_of_birth");
         MyDb db = new MyDb();
-        java.sql.Connection conn = db.getCon();
+        java.sql.Connection con = db.getCon();
         try {
-            Statement statement = conn.createStatement();
-            ResultSet rs = statement.executeQuery("select * from users where email = '" + username + "' and password = '"+userpassword);
-            if (rs.next()) {
-                out.println("Login Sucessfully");
-                this.getServletContext().getRequestDispatcher(Homepage).forward(request, response);
-            }else{
-                out.println("Login Fail");
-                this.getServletContext().getRequestDispatcher(VUE).forward(request, response); 
-            }
-        } catch (Exception ex) {
-            Logger.getLogger(Connection.class.getName()).log(Level.SEVERE, null, ex);
+            Statement stmt = con.createStatement();
+            stmt.executeUpdate("insert into users (email,password,first_name,last_name,phone,date_of_birth) values ('" + 
+                    email + "','" + pass + "','" + firstname + "','" + lastname + "','" + phone + "','" + dateofbirth + "')");
+            out.println("data inserted sucessfully");
+        } catch (SQLException e) {
+// TODO Auto-generated catch block
+            e.printStackTrace();
         }
     }
 

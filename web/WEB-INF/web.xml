@@ -17,6 +17,10 @@
         <servlet-name>Connection</servlet-name>
         <servlet-class>com.sdzee.servlets.Connection</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>Register</servlet-name>
+        <servlet-class>com.sdzee.servlets.Register</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>Ad</servlet-name>
         <url-pattern>/ad</url-pattern>
@@ -32,6 +36,10 @@
     <servlet-mapping>
         <servlet-name>Connection</servlet-name>
         <url-pattern>/connection</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>Register</servlet-name>
+        <url-pattern>/register</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

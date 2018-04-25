@@ -19,7 +19,7 @@
     </servlet-mapping>
     <servlet-mapping>
         <servlet-name>DashboardServlet</servlet-name>
-        <url-pattern>/home</url-pattern>
+        <url-pattern>/ride</url-pattern>
     </servlet-mapping>
     <servlet-mapping>
         <servlet-name>CityServlets</servlet-name>

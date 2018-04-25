@@ -47,13 +47,15 @@
                         <hr>
                     </div>
                     <div class="col-lg-8 col-md-8 col-sm-8 col-xs-8 mx-auto">
+                        <form method="post" action="ride">
+                    
                         <p class="text-faded mb-5">Le covoiturage simplifie vos trajets.</p>
-                        <div class="control-group"><input id="fromlocation" type="text" class="form-control" placeholder="Depart" autofocus></div>
+                        <div class="control-group"><input name="fromlocation" id="fromlocation" type="text" class="form-control" placeholder="Depart" autofocus></div>
                         <br>
-                        <div class="control-group"><input id="tolocation" type="text" class="form-control" placeholder="Destination"></div>
+                        <div class="control-group"><input name="tolocation" id="tolocation" type="text" class="form-control" placeholder="Destination"></div>
                         <br>
                         <div class="control-group">
-                            <div class="controls input-append date form_date" data-date="" data-date-format="dd MM yyyy" data-link-field="dtp_input2" data-link-format="yyyy-mm-dd">
+                            <div name="ridedate" class="controls input-append date form_date" data-date="" data-date-format="dd MM yyyy" data-link-field="dtp_input2" data-link-format="yyyy-mm-dd">
                                 <input class="form-control" type="text" placeholder="Date" readonly>
                                 <span class="add-on"><i class="icon-remove"></i></span>
                                 <span class="add-on"><i class="icon-th"></i></span>
@@ -61,8 +63,10 @@
                             <input type="hidden" id="dtp_input2" value="" /><br/>
                         </div>
                         <br><br>
-                        <a class="btn btn-primary btn-xl js-scroll-trigger" href="travelling.jsp">Chercher un trajet</a>
-                    </div>
+                        <input type="submit" class="btn btn-primary btn-xl js-scroll-trigger" value="Chercher un trajet">
+                    
+                    </form>
+                        </div>
                 </div>
             </div>
         </header>

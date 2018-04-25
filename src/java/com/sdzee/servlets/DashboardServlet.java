@@ -29,10 +29,6 @@ public class DashboardServlet extends HttpServlet {
      */
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        response.setContentType("text/html;charset=UTF-8");
-        
-        request.getRequestDispatcher("/home.jsp").
-                  forward(request,response);
     }
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
@@ -47,7 +43,10 @@ public class DashboardServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        processRequest(request, response);
+        response.setContentType("text/html;charset=UTF-8");
+        
+        request.getRequestDispatcher("/home.jsp").
+                  forward(request,response);
     }
 
     /**
@@ -61,7 +60,13 @@ public class DashboardServlet extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        processRequest(request, response);
+        response.setContentType("text/html;charset=UTF-8");
+        String fromlocation = request.getParameter("fromlocation");
+        String tolocation = request.getParameter("tolocation");
+        String date = request.getParameter("date");
+        
+        request.getRequestDispatcher("/travelling.jsp").
+                  forward(request,response);
     }
 
     /**

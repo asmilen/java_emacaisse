@@ -38,7 +38,7 @@ CREATE TABLE `ride` (
   `destination_city` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
   `seats_offered` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
   `price` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `contribution_per_head` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,,
+  `contribution_per_head` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
   `luggage_size` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
   PRIMARY KEY (`id`),
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;

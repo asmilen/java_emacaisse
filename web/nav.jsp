@@ -22,17 +22,16 @@
                         <li class="nav-item">
                             <a class="nav-link js-scroll-trigger" href="userprofile.jsp">Profil</a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link js-scroll-trigger" href="login.jsp">Connexion</a>
-                        </li>
+                        
                         <li class="nav-item">
                             <a class="nav-link js-scroll-trigger" href="vehicle.jsp">Vehicle</a>
                         </li>
                         <li class="nav-item">
-                            <!--<a class="nav-link js-scroll-trigger" href="ad">Proposer un covoiturage</a>-->
                             <a class="nav-link js-scroll-trigger" href="contact.jsp">Contact</a>
                         </li>
-                               
+                        <li class="nav-item">
+                            <a class="nav-link js-scroll-trigger" href="login.jsp">Connexion</a>
+                        </li>       
                     </ul>
                 </div>
             </div>

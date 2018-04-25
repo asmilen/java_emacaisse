@@ -13,6 +13,10 @@
         <servlet-name>CityServlets</servlet-name>
         <servlet-class>com.sdzee.servlets.CityServlets</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>Connection</servlet-name>
+        <servlet-class>com.sdzee.servlets.Connection</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>Ad</servlet-name>
         <url-pattern>/ad</url-pattern>
@@ -24,6 +28,10 @@
     <servlet-mapping>
         <servlet-name>CityServlets</servlet-name>
         <url-pattern>/ajaxcity</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>Connection</servlet-name>
+        <url-pattern>/connection</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

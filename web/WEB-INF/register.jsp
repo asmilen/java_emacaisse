@@ -23,7 +23,7 @@
     </head>
     <body>
         <div align="center" class="table">
-            <form method="get" action="Register">
+            <form method="post" action="/register">
                 <fieldset>
                     <legend>Register</legend>
                     <div class="row"> 

@@ -46,6 +46,12 @@ public class Register extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         this.getServletContext().getRequestDispatcher(VUE).forward(request, response);
+        
+    }
+
+    public void doPost( HttpServletRequest request, HttpServletResponse response ) throws ServletException, IOException{
+        /* Récupération des champs du formulaire. */
+        doGet(request, response);
         String email = request.getParameter("email");
         String pass = request.getParameter("password");
         String firstname = request.getParameter("first_name");
@@ -58,13 +64,14 @@ public class Register extends HttpServlet {
             Statement stmt = con.createStatement();
             stmt.executeUpdate("insert into users (email,password,first_name,last_name,phone,date_of_birth) values ('" + 
                     email + "','" + pass + "','" + firstname + "','" + lastname + "','" + phone + "','" + dateofbirth + "')");
+            //response.sendRedirect("/index.jsp");
             out.println("data inserted sucessfully");
         } catch (SQLException e) {
 // TODO Auto-generated catch block
             e.printStackTrace();
         }
     }
-
+    
     /**
      * Returns a short description of the servlet.
      *

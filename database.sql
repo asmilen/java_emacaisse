@@ -70,7 +70,80 @@ CREATE TABLE `users` (
   UNIQUE KEY `users_email_unique` (`email`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
+# Dump of table car
+# ------------------------------------------------------------
 
+DROP TABLE IF EXISTS `car`;
+
+CREATE TABLE `car` (
+  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
+  `name` varchar(50) NOT NULL,
+  `make` varchar(50) NOT NULL,
+  `model` varchar(50) NOT NULL,
+  `make_year` int(11) NOT NULL,
+  `comfort_level` int(11) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+# Dump of table luggage_size
+# ------------------------------------------------------------
+
+DROP TABLE IF EXISTS `luggage_size`;
+
+CREATE TABLE `luggage_size` (
+  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
+  `description` varchar(50) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+
+
+# Dump of table music_preference
+# ------------------------------------------------------------
+
+DROP TABLE IF EXISTS `music_preference`;
+
+CREATE TABLE `music_preference` (
+  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
+  `description` varchar(50) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+
+
+# Dump of table request
+# ------------------------------------------------------------
+
+DROP TABLE IF EXISTS `request`;
+
+CREATE TABLE `request` (
+  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
+  `requester_id` int(10) unsigned NOT NULL,
+  `ride_id` int(10) unsigned NOT NULL,
+  `enroute_city_id` int(10) unsigned DEFAULT NULL,
+  `created_on` date NOT NULL,
+  `request_status_id` int(10) unsigned NOT NULL,
+  PRIMARY KEY (`id`),
+  KEY `request_enroute_city` (`enroute_city_id`),
+  KEY `request_request_status` (`request_status_id`),
+  KEY `request_ride` (`ride_id`),
+  CONSTRAINT `request_enroute_city` FOREIGN KEY (`enroute_city_id`) REFERENCES `enroute_city` (`id`),
+  CONSTRAINT `request_request_status` FOREIGN KEY (`request_status_id`) REFERENCES `request_status` (`id`),
+  CONSTRAINT `request_ride` FOREIGN KEY (`ride_id`) REFERENCES `ride` (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+
+
+# Dump of table request_status
+# ------------------------------------------------------------
+
+DROP TABLE IF EXISTS `request_status`;
+
+CREATE TABLE `request_status` (
+  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
+  `description` varchar(10) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;

@@ -70,6 +70,7 @@ CREATE TABLE `users` (
   UNIQUE KEY `users_email_unique` (`email`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
+<<<<<<< HEAD
 INSERT INTO `users` (`id`, `email`, `password`, `permissions`, `last_login`, `first_name`, `last_name`, `created_at`, `updated_at`, `phone`, `date_of_birth`, `description`, `gender`, `driving_license_number`, `driving_license_valid_from`, `car_description`)
 VALUES
 	(1, 'namvu1210@gmail.com', '123456', NULL, NULL, 'Nam', 'Vu', NULL, NULL, '0412342123', NULL, NULL, 1, NULL, NULL, NULL),
@@ -80,7 +81,9 @@ INSERT INTO `ride` (`id`, `user_id`,`create_on`, `travel_start_time`, `travel_st
 VALUES
 	(1, 1,'2018-04-28', '12:09:00', '2018-04-28', '12:09:00', '2018-04-29', 'Montpellier', 'Paris', '4', '5', '5', '3'),
        (2, 2,'2018-04-28', '15:15:00', '2018-04-28', '12:15:00', '2018-04-29', 'Montpellier', 'Paris', '4', '8', '2', '1');
-
+=======
+# Dump of table car
+# ------------------------------------------------------------
 
 
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;

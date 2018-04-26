@@ -1,6 +1,9 @@
 package com.sdzee.servlets;
 
 import java.io.IOException;
+import static java.lang.System.out;
+import java.sql.ResultSet;
+import java.sql.Statement;
 import java.util.Hashtable;
 import javax.naming.Context;
 import javax.naming.directory.DirContext;
@@ -13,27 +16,35 @@ import javax.servlet.http.HttpServletResponse;
 
 public class Connection extends HttpServlet {
     public static final String VUE = "/WEB-INF/connection.jsp";
+    public static final String Homepage="/index.jsp";
     public static final String CHAMP_EMAIL = "username";
     public static final String CHAMP_PASS = "userpassword";
     public static boolean bool = false;
  
-
+    @Override
     public void doGet( HttpServletRequest request, HttpServletResponse response ) throws ServletException, IOException{
         /* Affichage de la page d'inscription */
         this.getServletContext().getRequestDispatcher( VUE ).forward( request, response );
     }
-	
+    @Override
     public void doPost( HttpServletRequest request, HttpServletResponse response ) throws ServletException, IOException{
         /* Récupération des champs du formulaire. */
         doGet(request, response);
         String email = request.getParameter( CHAMP_EMAIL );
         String motDePasse = request.getParameter( CHAMP_PASS );
-      
+        MyDb db = new MyDb();
+        java.sql.Connection con = db.getCon();
         try {
             validationEmail( email,response );
-         
-            
-            
+            Statement stmt = con.createStatement();
+            ResultSet rs=stmt.executeQuery("select * from users where email = '" + email + "' and password = '"+motDePasse);
+            if (rs.next()) {
+                out.println("Login Sucessfully");
+                this.getServletContext().getRequestDispatcher(Homepage).forward(request, response);
+            }else{
+                out.println("Login Fail");
+                this.getServletContext().getRequestDispatcher(VUE).forward(request, response); 
+            }
            
         } catch (Exception e) {
             /* Gérer les erreurs de validation ici. */

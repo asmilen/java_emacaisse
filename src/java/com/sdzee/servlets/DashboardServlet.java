@@ -5,8 +5,10 @@
  */
 package com.sdzee.servlets;
 
+import com.sdzee.beans.Ad;
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.util.List;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -61,9 +63,8 @@ public class DashboardServlet extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
-        String fromlocation = request.getParameter("fromlocation");
-        String tolocation = request.getParameter("tolocation");
-        String date = request.getParameter("date");
+        Ad annonce = new Ad();
+        List<String> result = annonce.getRide(request);
         
         request.getRequestDispatcher("/travelling.jsp").
                   forward(request,response);

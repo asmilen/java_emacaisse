@@ -70,6 +70,16 @@ CREATE TABLE `users` (
   UNIQUE KEY `users_email_unique` (`email`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
+INSERT INTO `users` (`id`, `email`, `password`, `permissions`, `last_login`, `first_name`, `last_name`, `created_at`, `updated_at`, `phone`, `date_of_birth`, `description`, `gender`, `driving_license_number`, `driving_license_valid_from`, `car_description`)
+VALUES
+	(1, 'namvu1210@gmail.com', '123456', NULL, NULL, 'Nam', 'Vu', NULL, NULL, '0412342123', NULL, NULL, 1, NULL, NULL, NULL),
+	(2, 'haidang@gmail.com', '123456', NULL, NULL, 'Dang', 'Nguyen', NULL, NULL, '242123123', NULL, NULL, 1, NULL, NULL, NULL);
+
+
+INSERT INTO `ride` (`id`, `user_id`,`create_on`, `travel_start_time`, `travel_start_date`, `travel_return_time`, `travel_return_date`, `source_city`, `destination_city`, `seats_offered`, `price`, `contribution_per_head`, `luggage_size`)
+VALUES
+	(1, 1,'2018-04-28', '12:09:00', '2018-04-28', '12:09:00', '2018-04-29', 'Montpellier', 'Paris', '4', '5', '5', '3'),
+       (2, 2,'2018-04-28', '15:15:00', '2018-04-28', '12:15:00', '2018-04-29', 'Montpellier', 'Paris', '4', '8', '2', '1');
 
 
 

@@ -136,6 +136,47 @@ public class Ad {
     
     /* La liste qui permet de savoir ou ca plante */
     private List<String> etatBDD = new ArrayList<>();
+    
+    public List<String> getRide(HttpServletRequest request)
+    {
+        try {
+            getEtatBDD().add( "Chargement du driver..." );
+        Class.forName( "com.mysql.jdbc.Driver" );
+            getEtatBDD().add( "Driver chargé !" );
+    } catch ( ClassNotFoundException e ) {
+            getEtatBDD().add( "Erreur lors du chargement : le driver n'a pas été trouvé dans le classpath ! <br/>"
+                + e.getMessage() );
+    }
+
+    /* Connexion à la base de données */
+    String url = "jdbc:mysql://localhost:3306/ema_caisse"; // a changer lors de la connection avec le serveur de l'ecole
+    String utilisateur = "root"; // A SIGNALER AU GROUPE
+    String motDePasse = "";  // IDEM
+    Connection connexion = null;
+    Statement statement = null;
+    ResultSet resultat = null;
+    try {
+            getEtatBDD().add( "Connexion à la base de données..." );
+        connexion = DriverManager.getConnection( url, utilisateur, motDePasse );
+            getEtatBDD().add( "Connexion réussie !" );
+
+        /* Création de l'objet gérant les requêtes */
+        statement = connexion.createStatement();
+            getEtatBDD().add( "Objet requête créé !" );
+        /* Recuperation de du user_id */
+        String fromlocation = request.getParameter("fromlocation");
+        String tolocation = request.getParameter("tolocation");
+        String date = request.getParameter("ridedate");
+        resultat = statement.executeQuery("SELECT * FROM ride WHERE source_city="+fromlocation+"and destination_city="+tolocation);
+ 
+    } catch ( SQLException e ) {
+            getEtatBDD().add( "Erreur lors de la connexion : <br/>"
+                + e.getMessage() );
+    } finally {
+        
+    }
+    return (List<String>) resultat;
+    }
 
     public List<String> executerTests( HttpServletRequest request ) {
     /* Chargement du driver JDBC pour MySQL */

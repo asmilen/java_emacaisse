@@ -76,7 +76,7 @@
                         </div>
                         <div>
                             <h2>
-                                Noureddine G
+                                
                             </h2>
                             <div>
                                 48 ans<br>
